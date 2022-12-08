@@ -8,11 +8,16 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ViewPatientComponent } from './view-patient/view-patient.component';
 
 const myRoute:Routes=[
   {
     path:"",
     component:AddPatientComponent
+  },
+  {
+    path:"view",
+    component:ViewPatientComponent
   }
 ]
 
@@ -20,7 +25,8 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AddPatientComponent,
-    NavBarComponent
+    NavBarComponent,
+    ViewPatientComponent
   ],
   imports: [
     BrowserModule,
