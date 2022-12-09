@@ -30,4 +30,21 @@ export class SearchPatientComponent {
     )
   }
 
+  deleteBtnClick=(id:any)=>{
+    let data:any={"id":id}
+    this.api.deletePatient(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if (response.status=="success") {
+          alert("patient deleted successfully")
+          
+        } 
+        else {
+          alert("something went wrong")
+          
+        }
+      }
+    )
+  }
+
 }
